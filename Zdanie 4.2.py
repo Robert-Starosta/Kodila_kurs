@@ -1,7 +1,7 @@
 def is_palindrom(palindrom):
     """
-    :param palindrom: Podaj słowo do sprawdzenia
-    :return: zwraca prawda lub fałsz
+    :param palindrom: give a word to check
+    :return: return true or false
     """
     if (palindrom == palindrom[::-1]):
         print("Słowo jest palindromem")
