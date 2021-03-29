@@ -3,19 +3,19 @@ logging.basicConfig(level=logging.DEBUG)
 
 def sum (a, b):
     logging.debug("Ten program dodał do siebie liczbę %i oraz %i" % (a, b))
-    print (a + b)
+    print ("Wynik działania to: %i" % (a+b))
 def difference(a, b):
     logging.debug("Ten program odjoł do siebie liczbę %i oraz %i" % (a, b))
-    print (a - b)
+    print ("Wynik działania to: %i" % (a-b))
 def multiplication(a, b):
-    print (a * b)
+    print ("Wynik działania to: %i" % (a*b))
     logging.debug("Ten program pomnożył dwie liczby %i oraz %i" % (a, b))
 def division(a, b):
     logging.debug("Ten program podzielił przez siebie liczby %i oraz %i" % (a, b))
     if b == 0:
         print("Nie można wykonanć działania dzielenie przez 0 niemożliwe")
     else:
-        print (a / b)
+        print ("Wynik działania to: %i" % (a/3b))
 
 
 
