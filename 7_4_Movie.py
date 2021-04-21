@@ -23,9 +23,11 @@ class MovieCatalog:
 class SerialCatalog(MovieCatalog):
     def __init__(self, episode_number, sezon_number, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        self.episode_number = episode_number
-        self.sezon_number = sezon_number
+        self.episode_number = str(episode_number).zfill(2)
+        self.sezon_number = str(sezon_number).zfill(2)
 
+    def __str__(self):
+        return super().__str__() + f" {self.episode_number} {self.sezon_number}"
 
 def Add_Movie(movie_name, movie_year, movie_genre):
     list.append(movie_name)
