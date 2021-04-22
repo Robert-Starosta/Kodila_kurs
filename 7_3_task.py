@@ -43,8 +43,8 @@ class BusinessContact(BaseContact):
         )
 
 
-def FakeBaseContact(z):
-    for x in range(z):
+def FakeBaseContact(how_many):
+    for _ in range(how_many):
         person_ID = fake.first_name() + "_" + fake.last_name()
         person_ID = BaseContact(fake.first_name(), fake.last_name(), fake.email(), fake.phone_number())
         persons.append(person_ID)
@@ -52,8 +52,8 @@ def FakeBaseContact(z):
         print(person)
 
 
-def FakeBusinessContact(y):
-    for x in range(y):
+def FakeBusinessContact(how_many):
+    for _ in range(how_many):
         person_IDB = fake.first_name() + "_" + fake.last_name()
         person_IDB = BusinessContact(
             first_name=fake.first_name(),
