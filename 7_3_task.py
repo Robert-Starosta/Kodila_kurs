@@ -2,7 +2,7 @@ from faker import Faker
 
 fake = Faker("pl_PL")
 persons = []
-personsB = []
+personsb = []
 
 
 class BaseContact:
@@ -43,19 +43,19 @@ class BusinessContact(BaseContact):
         )
 
 
-def FakeBaseContact(how_many):
+def fake_base_contact(how_many):
     for _ in range(how_many):
-        person_ID = fake.first_name() + "_" + fake.last_name()
-        person_ID = BaseContact(fake.first_name(), fake.last_name(), fake.email(), fake.phone_number())
-        persons.append(person_ID)
+        person_base = fake.first_name() + "_" + fake.last_name()
+        person_base = BaseContact(fake.first_name(), fake.last_name(), fake.email(), fake.phone_number())
+        persons.append(person_base)
     for person in persons:
         print(person)
 
 
-def FakeBusinessContact(how_many):
+def fake_business_contact(how_many):
     for _ in range(how_many):
-        person_IDB = fake.first_name() + "_" + fake.last_name()
-        person_IDB = BusinessContact(
+        person_business = fake.first_name() + "_" + fake.last_name()
+        person_business = BusinessContact(
             first_name=fake.first_name(),
             last_name=fake.last_name(),
             mail=fake.company_email(),
@@ -63,18 +63,19 @@ def FakeBusinessContact(how_many):
             business=fake.company(),
             position=fake.job()
         )
-        personsB.append(person_IDB)
-    for personB in personsB:
-        print(personB)
+        personsb.append(person_business)
+    for personb in personsb:
+        print(personb)
 
 if __name__ == "__main__":
+    fake = Faker("pl_PL")
     what_create = input(
         "What type of contacts will be created Base/Business: "
     )
     how_many = int(input("How many contacts: "))
     if what_create == "Base":
-        FakeBaseContact(how_many)
+        fake_base_contact(how_many)
     elif what_create == "Business":
-        FakeBusinessContact(how_many)
+        fake_business_contact(how_many)
     else:
         print("Value expected: Base or Business")
