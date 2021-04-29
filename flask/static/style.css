@@ -1,0 +1,24 @@
+h1{
+  background: grey;
+  font-family: Arial;
+  text-align: center;
+  border-radius: 10px;
+}
+img {
+  width: 800px;
+  hight: 600px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.heder2{
+  color: burlywood;
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+  background: grey;
+}
+p {
+  font-weight: bold;
+  font-size: 20px;
+}
