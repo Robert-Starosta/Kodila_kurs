@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ZAKUP WALUT</title>
+</head>
+<body>
+<h1>Ile kosztuje waluta na dzień {{current_date}} po kursie NBP</h1>
+ <form method="POST" action="/NBP/">
+  <div class="container">
+      <lebel for="currency"><b>Wybierz walutę:</b></lebel>
+      <select name="currency" id="currency">
+          {% for type in currency_type %}
+          <option value={{type}}>{{type}}</option>
+          {% endfor %}
+      </select>
+      <label for="quantity"><b>Ile chcesz kupić</b></label>
+      <input type="float" name="quantity" required>
+      <button type="submit">Przelicz</button>
+  </div>
+</form>
+</body>
+</html>
